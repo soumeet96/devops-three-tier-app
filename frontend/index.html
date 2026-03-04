@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Soumeet DevOps Platform</title>
+</head>
+<body>
+
+<h1>DevOps Three Tier App</h1>
+
+<button onclick="getData()">Call Backend</button>
+
+<p id="response"></p>
+
+<script>
+async function getData() {
+  const res = await fetch("/api");
+  const data = await res.json();
+  document.getElementById("response").innerText = data.message;
+}
+</script>
+
+</body>
+</html>
